@@ -35,4 +35,22 @@ return [
         ],
     ],
 
+    // Image Generation Services Configuration
+    'image_generation' => [
+        // Provider options: 'pollinations', 'stability', 'openai'
+        'provider' => env('IMAGE_GENERATION_PROVIDER', 'pollinations'),
+    ],
+
+    'openai' => [
+        'api_key' => env('OPENAI_API_KEY'),
+    ],
+
+    'stability' => [
+        'api_key' => env('STABILITY_API_KEY'),
+    ],
+
+    'gemini' => [
+        'api_key' => env('GEMINI_API_KEY'),
+    ],
+
 ];

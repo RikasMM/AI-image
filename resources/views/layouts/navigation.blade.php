@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('images.index')" :active="request()->routeIs('images.*')">
+                        {{ __('AI Image Generator') }}
+                    </x-nav-link>
                 </div>
             </div>
 
