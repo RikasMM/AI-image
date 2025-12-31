@@ -24,4 +24,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/images/{image}', [ImageController::class, 'destroy'])->name('images.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

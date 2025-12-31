@@ -65,7 +65,8 @@
                     <i class="fas fa-clock text-2xl text-pink-400"></i>
                 </div>
             </div>
-            <p class="text-xs text-slate-500">{{ $lastImage ? $lastImage->created_at->diffForHumans() : 'Start creating now' }}</p>
+            <p class="text-xs text-slate-500">
+                {{ $lastImage ? $lastImage->created_at->diffForHumans() : 'Start creating now' }}</p>
         </div>
     </div>
 
@@ -77,11 +78,13 @@
                     <i class="fas fa-wand-magic-sparkles text-indigo-400"></i>
                     Ready to Create?
                 </h2>
-                <p class="text-slate-300 mb-8">Describe your imagination and let AI bring it to life. Create stunning, unique images in seconds.</p>
-                
+                <p class="text-slate-300 mb-8">Describe your imagination and let AI bring it to life. Create stunning,
+                    unique images in seconds.</p>
+
                 <div class="grid sm:grid-cols-2 gap-4 mb-8">
                     <div class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                        <div
+                            class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-1">
                             <i class="fas fa-check text-emerald-400 text-xs"></i>
                         </div>
                         <div>
@@ -90,7 +93,8 @@
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                        <div
+                            class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-1">
                             <i class="fas fa-check text-emerald-400 text-xs"></i>
                         </div>
                         <div>
@@ -99,7 +103,8 @@
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                        <div
+                            class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-1">
                             <i class="fas fa-check text-emerald-400 text-xs"></i>
                         </div>
                         <div>
@@ -108,7 +113,8 @@
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                        <div
+                            class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-1">
                             <i class="fas fa-check text-emerald-400 text-xs"></i>
                         </div>
                         <div>
@@ -118,7 +124,8 @@
                     </div>
                 </div>
 
-                <a href="{{ route('images.create') }}" class="btn-primary text-lg py-4 px-8 w-full sm:w-auto inline-flex items-center justify-center gap-3 font-semibold">
+                <a href="{{ route('images.create') }}"
+                    class="btn-primary text-lg py-4 px-8 w-full sm:w-auto inline-flex items-center justify-center gap-3 font-semibold">
                     <i class="fas fa-wand-magic-sparkles"></i>
                     Create Your First Image
                 </a>
@@ -138,13 +145,12 @@
                         @foreach($recentImages as $image)
                             <div class="image-card group">
                                 <div class="relative h-48 bg-slate-800 overflow-hidden">
-                                    <img 
-                                        src="{{ $image->image_url }}" 
-                                        alt="{{ $image->prompt }}" 
-                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                                    >
-                                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                                        <a href="{{ route('images.index') }}" class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 rounded-lg text-white transition">
+                                    <img src="{{ $image->image_url }}" alt="{{ $image->prompt }}"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                    <div
+                                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                        <a href="{{ route('images.index') }}"
+                                            class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 rounded-lg text-white transition">
                                             <i class="fas fa-arrow-right mr-2"></i>View All
                                         </a>
                                     </div>
@@ -157,7 +163,8 @@
                         @endforeach
                     </div>
                     <div class="text-center mt-4">
-                        <a href="{{ route('images.index') }}" class="text-indigo-400 hover:text-indigo-300 transition flex items-center justify-center gap-2">
+                        <a href="{{ route('images.index') }}"
+                            class="text-indigo-400 hover:text-indigo-300 transition flex items-center justify-center gap-2">
                             <span>View All {{ auth()->user()->images()->count() }} Images</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -181,19 +188,23 @@
                 </h3>
                 <ol class="space-y-3 text-sm">
                     <li class="flex gap-3">
-                        <span class="w-6 h-6 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-xs font-bold flex-shrink-0">1</span>
+                        <span
+                            class="w-6 h-6 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-xs font-bold flex-shrink-0">1</span>
                         <span class="text-slate-300">Write a detailed prompt</span>
                     </li>
                     <li class="flex gap-3">
-                        <span class="w-6 h-6 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-xs font-bold flex-shrink-0">2</span>
+                        <span
+                            class="w-6 h-6 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-xs font-bold flex-shrink-0">2</span>
                         <span class="text-slate-300">Choose image size</span>
                     </li>
                     <li class="flex gap-3">
-                        <span class="w-6 h-6 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-xs font-bold flex-shrink-0">3</span>
+                        <span
+                            class="w-6 h-6 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-xs font-bold flex-shrink-0">3</span>
                         <span class="text-slate-300">Wait for generation</span>
                     </li>
                     <li class="flex gap-3">
-                        <span class="w-6 h-6 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-xs font-bold flex-shrink-0">4</span>
+                        <span
+                            class="w-6 h-6 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-xs font-bold flex-shrink-0">4</span>
                         <span class="text-slate-300">Download & share</span>
                     </li>
                 </ol>
@@ -240,7 +251,8 @@
                         <p class="text-slate-400">Member Since</p>
                         <p class="text-white font-medium">{{ auth()->user()->created_at->format('M d, Y') }}</p>
                     </div>
-                    <a href="{{ route('profile.edit') }}" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition mt-2">
+                    <a href="{{ route('profile.edit') }}"
+                        class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition mt-2">
                         <i class="fas fa-edit"></i>
                         Edit Profile
                     </a>

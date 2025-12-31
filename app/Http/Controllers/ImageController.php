@@ -38,7 +38,7 @@ class ImageController extends Controller
         try {
             // Generate image using the service
             $imageUrl = $this->imageService->generateImage($validated['prompt'], $validated['size']);
-            
+
             // Save to database
             auth()->user()->images()->create([
                 'prompt' => $validated['prompt'],
@@ -57,7 +57,7 @@ class ImageController extends Controller
     {
         $this->authorize('delete', $image);
         $image->delete();
-        
+
         return back()->with('success', 'Image deleted successfully!');
     }
 }

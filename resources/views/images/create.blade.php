@@ -22,14 +22,10 @@
                     <label for="prompt" class="block text-sm font-semibold text-white mb-3">
                         <i class="fas fa-lightbulb text-indigo-400 mr-2"></i>Your Prompt
                     </label>
-                    <textarea
-                        name="prompt"
-                        id="prompt"
-                        rows="6"
+                    <textarea name="prompt" id="prompt" rows="6"
                         placeholder="Describe the image you want to generate... Be as detailed as possible!"
                         class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-white placeholder-slate-500 resize-none transition"
-                        required
-                    ></textarea>
+                        required></textarea>
                     @error('prompt')
                         <p class="text-red-400 text-sm mt-2 flex items-center gap-2">
                             <i class="fas fa-exclamation-circle"></i> {{ $message }}
@@ -46,7 +42,8 @@
                     <div class="grid grid-cols-3 gap-3">
                         <label class="relative">
                             <input type="radio" name="size" value="256x256" class="sr-only peer" required>
-                            <div class="peer-checked:border-indigo-500 peer-checked:bg-indigo-500/20 peer-checked:shadow-lg peer-checked:shadow-indigo-500/20 border border-slate-700 rounded-lg p-4 cursor-pointer transition text-center">
+                            <div
+                                class="peer-checked:border-indigo-500 peer-checked:bg-indigo-500/20 peer-checked:shadow-lg peer-checked:shadow-indigo-500/20 border border-slate-700 rounded-lg p-4 cursor-pointer transition text-center">
                                 <div class="text-2xl font-bold ai-gradient-text">Small</div>
                                 <div class="text-xs text-slate-400 mt-1">256×256px</div>
                             </div>
@@ -54,7 +51,8 @@
 
                         <label class="relative">
                             <input type="radio" name="size" value="512x512" class="sr-only peer" checked>
-                            <div class="peer-checked:border-indigo-500 peer-checked:bg-indigo-500/20 peer-checked:shadow-lg peer-checked:shadow-indigo-500/20 border border-slate-700 rounded-lg p-4 cursor-pointer transition text-center">
+                            <div
+                                class="peer-checked:border-indigo-500 peer-checked:bg-indigo-500/20 peer-checked:shadow-lg peer-checked:shadow-indigo-500/20 border border-slate-700 rounded-lg p-4 cursor-pointer transition text-center">
                                 <div class="text-2xl font-bold ai-gradient-text">Medium</div>
                                 <div class="text-xs text-slate-400 mt-1">512×512px</div>
                             </div>
@@ -62,7 +60,8 @@
 
                         <label class="relative">
                             <input type="radio" name="size" value="1024x1024" class="sr-only peer">
-                            <div class="peer-checked:border-indigo-500 peer-checked:bg-indigo-500/20 peer-checked:shadow-lg peer-checked:shadow-indigo-500/20 border border-slate-700 rounded-lg p-4 cursor-pointer transition text-center">
+                            <div
+                                class="peer-checked:border-indigo-500 peer-checked:bg-indigo-500/20 peer-checked:shadow-lg peer-checked:shadow-indigo-500/20 border border-slate-700 rounded-lg p-4 cursor-pointer transition text-center">
                                 <div class="text-2xl font-bold ai-gradient-text">Large</div>
                                 <div class="text-xs text-slate-400 mt-1">1024×1024px</div>
                             </div>
@@ -77,7 +76,8 @@
 
 
                 <!-- Submit Button -->
-                <button type="submit" class="w-full btn-primary text-lg font-semibold flex items-center justify-center gap-2 py-3">
+                <button type="submit"
+                    class="w-full btn-primary text-lg font-semibold flex items-center justify-center gap-2 py-3">
                     <i class="fas fa-wand-magic-sparkles"></i>
                     Generate Image
                 </button>
@@ -88,13 +88,19 @@
                         <i class="fas fa-sparkles text-amber-400"></i>Quick Examples:
                     </p>
                     <div class="space-y-2 text-xs">
-                        <button type="button" onclick="document.getElementById('prompt').value = 'A serene landscape with mountains, crystal clear lake at sunset, golden hour lighting'; document.getElementById('prompt').focus()" class="w-full text-left px-3 py-2 bg-slate-700/50 hover:bg-slate-700 rounded text-slate-300 transition">
+                        <button type="button"
+                            onclick="document.getElementById('prompt').value = 'A serene landscape with mountains, crystal clear lake at sunset, golden hour lighting'; document.getElementById('prompt').focus()"
+                            class="w-full text-left px-3 py-2 bg-slate-700/50 hover:bg-slate-700 rounded text-slate-300 transition">
                             Mountain sunset landscape
                         </button>
-                        <button type="button" onclick="document.getElementById('prompt').value = 'A futuristic city skyline with neon lights, cyberpunk aesthetic, flying cars in the sky'; document.getElementById('prompt').focus()" class="w-full text-left px-3 py-2 bg-slate-700/50 hover:bg-slate-700 rounded text-slate-300 transition">
+                        <button type="button"
+                            onclick="document.getElementById('prompt').value = 'A futuristic city skyline with neon lights, cyberpunk aesthetic, flying cars in the sky'; document.getElementById('prompt').focus()"
+                            class="w-full text-left px-3 py-2 bg-slate-700/50 hover:bg-slate-700 rounded text-slate-300 transition">
                             Cyberpunk futuristic city
                         </button>
-                        <button type="button" onclick="document.getElementById('prompt').value = 'A magical forest with glowing trees, ethereal creatures, mystical atmosphere, fantasy art'; document.getElementById('prompt').focus()" class="w-full text-left px-3 py-2 bg-slate-700/50 hover:bg-slate-700 rounded text-slate-300 transition">
+                        <button type="button"
+                            onclick="document.getElementById('prompt').value = 'A magical forest with glowing trees, ethereal creatures, mystical atmosphere, fantasy art'; document.getElementById('prompt').focus()"
+                            class="w-full text-left px-3 py-2 bg-slate-700/50 hover:bg-slate-700 rounded text-slate-300 transition">
                             Magical fantasy forest
                         </button>
                     </div>
@@ -116,7 +122,8 @@
                     </div>
                     <div class="flex gap-3">
                         <i class="fas fa-check text-emerald-400 mt-1 flex-shrink-0"></i>
-                        <p><strong>Use Art Styles:</strong> Mention styles like "oil painting", "digital art", "photography"</p>
+                        <p><strong>Use Art Styles:</strong> Mention styles like "oil painting", "digital art",
+                            "photography"</p>
                     </div>
                     <div class="flex gap-3">
                         <i class="fas fa-check text-emerald-400 mt-1 flex-shrink-0"></i>
@@ -128,7 +135,8 @@
                     </div>
                     <div class="flex gap-3">
                         <i class="fas fa-check text-emerald-400 mt-1 flex-shrink-0"></i>
-                        <p><strong>Resolution Matters:</strong> Larger sizes take more credits but provide better quality</p>
+                        <p><strong>Resolution Matters:</strong> Larger sizes take more credits but provide better
+                            quality</p>
                     </div>
                 </div>
             </div>
@@ -144,7 +152,8 @@
                         <span class="font-semibold text-indigo-400">~30-60 seconds</span>
                     </div>
                     <div class="border-t border-slate-700 pt-3">
-                        <p class="text-slate-400">Your generated images will be saved to your gallery and accessible anytime.</p>
+                        <p class="text-slate-400">Your generated images will be saved to your gallery and accessible
+                            anytime.</p>
                     </div>
                 </div>
             </div>

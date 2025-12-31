@@ -82,8 +82,8 @@ class ImageGenerationService
             }
 
             $dimensions = explode('x', $size);
-            $width = (int)$dimensions[0];
-            $height = (int)$dimensions[1];
+            $width = (int) $dimensions[0];
+            $height = (int) $dimensions[1];
 
             // Map image sizes to Stability AI supported sizes
             $stabilitySize = $this->mapToStabilitySize($width, $height);
@@ -92,18 +92,18 @@ class ImageGenerationService
                 'Authorization' => "Bearer {$apiKey}",
                 'Content-Type' => 'application/json',
             ])->post('https://api.stability.ai/v1/generation/stable-diffusion-v1-6/text-to-image', [
-                'text_prompts' => [
-                    [
-                        'text' => $prompt,
-                        'weight' => 1,
-                    ],
-                ],
-                'cfg_scale' => 7,
-                'height' => $stabilitySize['height'],
-                'width' => $stabilitySize['width'],
-                'samples' => 1,
-                'steps' => 30,
-            ]);
+                        'text_prompts' => [
+                            [
+                                'text' => $prompt,
+                                'weight' => 1,
+                            ],
+                        ],
+                        'cfg_scale' => 7,
+                        'height' => $stabilitySize['height'],
+                        'width' => $stabilitySize['width'],
+                        'samples' => 1,
+                        'steps' => 30,
+                    ]);
 
             if ($response->successful()) {
                 $data = $response->json();
@@ -145,12 +145,12 @@ class ImageGenerationService
             $response = Http::withHeaders([
                 'Authorization' => "Bearer {$apiKey}",
             ])->post('https://api.openai.com/v1/images/generations', [
-                'prompt' => $prompt,
-                'n' => 1,
-                'size' => $dallSize,
-                'quality' => 'standard',
-                'model' => 'dall-e-3',
-            ]);
+                        'prompt' => $prompt,
+                        'n' => 1,
+                        'size' => $dallSize,
+                        'quality' => 'standard',
+                        'model' => 'dall-e-3',
+                    ]);
 
             if ($response->successful()) {
                 $data = $response->json();
@@ -231,7 +231,7 @@ class ImageGenerationService
     {
         $dimensions = explode('x', $size);
         $seed = uniqid();
-        
+
         // Using Picsum Photos as fallback
         return "https://picsum.photos/{$dimensions[0]}/{$dimensions[1]}?random={$seed}";
     }
